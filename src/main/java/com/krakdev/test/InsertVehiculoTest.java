@@ -13,7 +13,7 @@ public class InsertVehiculoTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Vehiculo vehiculo = new Vehiculo("PDA-5678", "KIA", "Rio", 2022, 20000.99, "Gris", true, 45000);
+		Vehiculo vehiculo = new Vehiculo("PDE-6718", "KIA", "Rio", 2022, 20000.99, "Gris", true, 45000);
 		
 		InsertVehiculo.insertar(vehiculo);
 
