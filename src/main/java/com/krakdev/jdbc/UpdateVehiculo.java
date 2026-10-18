@@ -10,7 +10,7 @@ public class UpdateVehiculo {
 	
 	private static final Logger log = LogManager.getLogger(UpdateVehiculo.class);
 
-	public void actualizar(String placa, double precio, boolean disponible) {
+	public void actualizar(String placa, double precio, boolean disponible, int kilometraje) {
 
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -19,13 +19,14 @@ public class UpdateVehiculo {
 
 			con = Conexion.getConnection();
 
-			String sql = "UPDATE vehiculos SET precio = ?, disponible = ? WHERE placa = ?";
+			String sql = "UPDATE vehiculos SET precio = ?, disponible = ?, kilometraje = ? WHERE placa = ?";
 
 			ps = con.prepareStatement(sql);
 
 			ps.setDouble(1, precio);
 			ps.setBoolean(2, disponible);
-			ps.setString(3, placa);
+			ps.setInt(3, kilometraje);
+			ps.setString(4, placa);
 
 			int filas = ps.executeUpdate();
 

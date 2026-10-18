@@ -9,7 +9,7 @@ public class UpdateVehiculoTest {
 		
 		UpdateVehiculo update = new UpdateVehiculo();
 
-		update.actualizar("PDA-1234", 21500.99, false);
+		update.actualizar("PDA-1234", 21500.99, false,80000);
 	
 
 	}
